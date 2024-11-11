@@ -1,0 +1,146 @@
+.App {
+    font-family: 'Arial', sans-serif;
+    margin: 30px auto;
+    padding: 20px;
+    max-width: 800px;
+    background-color: #ffdbac;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+.taskHeader {
+    text-align: center;
+    background-color: #f1c27d;
+    color: #3b3b3a;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    border-radius: 8px 8px 0 0;
+}
+
+.taskForm {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.taskNameInput,
+.taskPrioritySelect,
+.taskDeadlineInput,
+.addTaskButton {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #3e3730;
+    border-radius: 4px;
+    flex-grow: 1;
+    font-size: 16px;
+    color: #f5f5f5;
+}
+
+.taskPrioritySelect {
+    cursor: pointer;
+    background-color: #e0ac69;
+}
+
+.addTaskButton {
+    background-color: #e0ac69;
+    color: rgb(253, 253, 253);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.addTaskButton:hover {
+    background-color: #e4c193d4;
+}
+
+.searchFilter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.searchInput,
+.filterPrioritySelect {
+    padding: 10px;
+    border: 1px solid #b8b8b8f6;
+    border-radius: 4px;
+    flex-grow: 1;
+    font-size: 16px;
+}
+
+.heading,
+.completedHeading {
+    color: black;
+    text-align: center;
+    font-weight: 400;
+}
+
+.taskTable,
+.completedTable {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #8d5524;
+}
+
+.taskTable th,
+.taskTable td,
+.completedTable th,
+.completedTable td {
+    padding: 10px;
+    text-align: center;
+}
+
+.taskTable th,
+.completedTable th {
+    background-color: #a88a63;
+    color: white;
+}
+
+.taskTable tbody tr:nth-child(even),
+.completedTable tbody tr:nth-child(even) {
+    background-color: #836338;
+}
+
+.deleteTaskButton {
+    margin-right: 5px;
+    cursor: pointer;
+    padding: 12px;
+    background: rgba(224, 43, 43, 0.595);
+    border-radius: 10px;
+    border: none;
+    color: white;
+}
+
+.deleteTaskButton:hover {
+    background: red;
+}
+
+.markDoneButton,
+.editTaskButton {
+    margin-right: 5px;
+    cursor: pointer;
+    padding: 12px;
+    background: #218a1574;
+    border-radius: 10px;
+    border: none;
+    color: white;
+}
+
+.markDoneButton:hover {
+    background: rgb(23, 175, 23);
+}
+
+.editTaskButton:hover {
+    background: rgb(23, 175, 23);
+}
+
+@media (max-width: 600px) {
+    .taskForm {
+        flex-direction: column;
+    }
+
+    .searchFilter {
+        flex-direction: column;
+    }
+}
